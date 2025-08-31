@@ -6,7 +6,13 @@ interface ProductCardProps {
   product: Product;
 }
 
-export default function ProductCard({ product }: ProductCardProps) {
+// Add a function prop to handle the button click
+interface ProductCardProps {
+  product: Product;
+  onTryOn: (product: Product) => void;
+}
+
+export default function ProductCard({ product, onTryOn }: ProductCardProps) {
   return (
     <div className={styles.card}>
       <div className={styles.imageContainer}>
@@ -21,6 +27,9 @@ export default function ProductCard({ product }: ProductCardProps) {
       <div className={styles.info}>
         <h2 className={styles.name}>{product.name}</h2>
         <p className={styles.price}>${product.price.toFixed(2)}</p>
+        <button className={styles.arButton} onClick={() => onTryOn(product)}>
+          Gaze into the Scrying Mirror
+        </button>
       </div>
     </div>
   );
