@@ -2,101 +2,96 @@
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(10px);
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
-  animation: fadeIn 0.3s ease;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  z-index: 2000;
 }
 
 .container {
   position: relative;
-  width: 90%;
-  max-width: 800px;
-  height: 80vh;
-  background-color: #000;
-  border: 1px solid var(--color-accent-cyan);
-  box-shadow: 0 0 20px var(--color-accent-cyan);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
+  background: #000;
 }
 
 .closeButton {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 2.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid #555;
+  color: #fff;
+  font-size: 2rem;
   cursor: pointer;
-  transition: transform 0.2s;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
 }
 
-.closeButton:hover {
-  transform: scale(1.2) rotate(90deg);
-  color: var(--color-accent-cyan);
+.cameraContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .cameraView {
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  object-fit: cover; /* This makes the video cover the container */
+}
+
+.arPlaceholder {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.5rem;
+  z-index: 10;
   text-align: center;
-  background: repeating-linear-gradient(
-    45deg,
-    #111,
-    #111 10px,
-    #222 10px,
-    #222 20px
-  );
-}
-
-.placeholderText {
-  font-size: 2rem;
-  font-family: var(--font-primary);
-  color: var(--color-text-secondary);
-}
-
-.placeholderText strong {
-    color: var(--color-text-primary);
-}
-
-.infoText {
-  font-size: 1rem;
-  font-style: italic;
-  margin-top: 1rem;
-  color: var(--color-text-secondary);
 }
 
 .productOverlay {
   position: absolute;
-  bottom: 10%;
+  bottom: 2rem;
   left: 50%;
   transform: translateX(-50%);
-  opacity: 0.5;
-  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 15;
+  background: rgba(26, 26, 26, 0.8);
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid #444;
+  backdrop-filter: blur(5px);
 }
 
 .productImage {
-  width: 150px;
-  height: 150px;
-  object-fit: contain;
-  filter: drop-shadow(0 0 10px #000);
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 2px solid #555;
+}
+
+.productName {
+  color: #e0e0e0;
+  margin-top: 0.5rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.2rem;
 }

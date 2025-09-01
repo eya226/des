@@ -1,0 +1,157 @@
+npm verbose cli /home/jules/.nvm/versions/node/v22.17.1/bin/node /home/jules/.nvm/versions/node/v22.17.1/bin/npm
+npm info using npm@11.5.1
+npm info using node@v22.17.1
+npm verbose title npm install
+npm verbose argv "install" "--loglevel" "verbose"
+npm verbose logfile logs-max:10 dir:/home/jules/.npm/_logs/2025-09-01T13_52_04_732Z-
+npm verbose logfile /home/jules/.npm/_logs/2025-09-01T13_52_04_732Z-debug-0.log
+npm http cache https://registry.npmjs.org/framer-motion 50ms (cache hit)
+npm http cache https://registry.npmjs.org/@emotion%2fis-prop-valid 22ms (cache hit)
+npm http cache https://registry.npmjs.org/react 26ms (cache hit)
+npm http cache https://registry.npmjs.org/react-dom 33ms (cache hit)
+npm http cache https://registry.npmjs.org/next 87ms (cache hit)
+npm http cache https://registry.npmjs.org/@opentelemetry%2fapi 9ms (cache hit)
+npm http cache https://registry.npmjs.org/@playwright%2ftest 31ms (cache hit)
+npm http cache https://registry.npmjs.org/babel-plugin-react-compiler 9ms (cache hit)
+npm http cache https://registry.npmjs.org/sass 10ms (cache hit)
+npm http cache https://registry.npmjs.org/@types%2fnode 52ms (cache hit)
+npm http cache https://registry.npmjs.org/@types%2freact 16ms (cache hit)
+npm http cache https://registry.npmjs.org/@types%2freact-dom 9ms (cache hit)
+npm http cache https://registry.npmjs.org/typescript 56ms (cache hit)
+npm http cache https://registry.npmjs.org/tslib 8ms (cache hit)
+npm http cache https://registry.npmjs.org/undici-types 12ms (cache hit)
+npm http cache https://registry.npmjs.org/csstype 16ms (cache hit)
+npm http cache https://registry.npmjs.org/motion-dom 17ms (cache hit)
+npm http cache https://registry.npmjs.org/motion-utils 17ms (cache hit)
+npm http cache https://registry.npmjs.org/postcss 16ms (cache hit)
+npm http cache https://registry.npmjs.org/styled-jsx 19ms (cache hit)
+npm http cache https://registry.npmjs.org/@next%2fenv 43ms (cache hit)
+npm http cache https://registry.npmjs.org/@swc%2fhelpers 93ms (cache hit)
+npm http cache https://registry.npmjs.org/sharp 27ms (cache hit)
+npm http cache https://registry.npmjs.org/caniuse-lite 121ms (cache hit)
+npm http cache https://registry.npmjs.org/@next%2fswc-darwin-x64 75ms (cache hit)
+npm http cache https://registry.npmjs.org/@next%2fswc-linux-x64-gnu 99ms (cache hit)
+npm http cache https://registry.npmjs.org/@next%2fswc-darwin-arm64 161ms (cache hit)
+npm http cache https://registry.npmjs.org/@next%2fswc-linux-x64-musl 120ms (cache hit)
+npm http cache https://registry.npmjs.org/@next%2fswc-win32-x64-msvc 114ms (cache hit)
+npm http cache https://registry.npmjs.org/@next%2fswc-linux-arm64-gnu 117ms (cache hit)
+npm http cache https://registry.npmjs.org/@next%2fswc-linux-arm64-musl 116ms (cache hit)
+npm http cache https://registry.npmjs.org/@next%2fswc-win32-arm64-msvc 114ms (cache hit)
+npm http cache https://registry.npmjs.org/scheduler 116ms (cache hit)
+npm http cache https://registry.npmjs.org/react 23ms (cache hit)
+npm http cache https://registry.npmjs.org/nanoid 30ms (cache hit)
+npm http cache https://registry.npmjs.org/picocolors 37ms (cache hit)
+npm http cache https://registry.npmjs.org/source-map-js 39ms (cache hit)
+npm http cache https://registry.npmjs.org/detect-libc 10ms (cache hit)
+npm http cache https://registry.npmjs.org/color 15ms (cache hit)
+npm http cache https://registry.npmjs.org/semver 12ms (cache hit)
+npm http cache https://registry.npmjs.org/@img%2fsharp-darwin-arm64 16ms (cache hit)
+npm http cache https://registry.npmjs.org/@img%2fsharp-libvips-darwin-arm64 11ms (cache hit)
+npm http cache https://registry.npmjs.org/@img%2fsharp-darwin-x64 18ms (cache hit)
+npm http cache https://registry.npmjs.org/@img%2fsharp-libvips-darwin-x64 12ms (cache hit)
+npm http cache https://registry.npmjs.org/@img%2fsharp-libvips-linux-arm 12ms (cache hit)
+npm http cache https://registry.npmjs.org/@img%2fsharp-libvips-linux-arm64 12ms (cache hit)
+npm http cache https://registry.npmjs.org/@img%2fsharp-libvips-linux-ppc64 12ms (cache hit)
+npm http cache https://registry.npmjs.org/@img%2fsharp-libvips-linux-s390x 11ms (cache hit)
+npm http cache https://registry.npmjs.org/@img%2fsharp-libvips-linux-x64 10ms (cache hit)
+npm http cache https://registry.npmjs.org/@img%2fsharp-libvips-linuxmusl-arm64 9ms (cache hit)
+npm http cache https://registry.npmjs.org/@img%2fsharp-linux-arm 8ms (cache hit)
+npm http cache https://registry.npmjs.org/@img%2fsharp-libvips-linuxmusl-x64 11ms (cache hit)
+npm http cache https://registry.npmjs.org/@img%2fsharp-linux-arm64 10ms (cache hit)
+npm http cache https://registry.npmjs.org/@img%2fsharp-linux-ppc64 10ms (cache hit)
+npm http cache https://registry.npmjs.org/@img%2fsharp-linux-s390x 10ms (cache hit)
+npm http cache https://registry.npmjs.org/@img%2fsharp-linuxmusl-arm64 8ms (cache hit)
+npm http cache https://registry.npmjs.org/@img%2fsharp-linuxmusl-x64 8ms (cache hit)
+npm http cache https://registry.npmjs.org/@img%2fsharp-linux-x64 13ms (cache hit)
+npm http cache https://registry.npmjs.org/@img%2fsharp-wasm32 9ms (cache hit)
+npm http cache https://registry.npmjs.org/@img%2fsharp-win32-ia32 7ms (cache hit)
+npm http cache https://registry.npmjs.org/@img%2fsharp-win32-arm64 11ms (cache hit)
+npm http cache https://registry.npmjs.org/client-only 6ms (cache hit)
+npm http cache https://registry.npmjs.org/@img%2fsharp-win32-x64 7ms (cache hit)
+npm http cache https://registry.npmjs.org/color-string 7ms (cache hit)
+npm http cache https://registry.npmjs.org/@emnapi%2fruntime 11ms (cache hit)
+npm http cache https://registry.npmjs.org/color-convert 12ms (cache hit)
+npm http cache https://registry.npmjs.org/color-name 10ms (cache hit)
+npm http cache https://registry.npmjs.org/color-name 11ms (cache hit)
+npm http cache https://registry.npmjs.org/simple-swizzle 11ms (cache hit)
+npm http cache https://registry.npmjs.org/is-arrayish 6ms (cache hit)
+npm verbose reify failed optional dependency /app/gothic-store/node_modules/@img/sharp-win32-x64
+npm verbose reify failed optional dependency /app/gothic-store/node_modules/@img/sharp-win32-ia32
+npm verbose reify failed optional dependency /app/gothic-store/node_modules/@img/sharp-win32-arm64
+npm verbose reify failed optional dependency /app/gothic-store/node_modules/@img/sharp-wasm32
+npm verbose reify failed optional dependency /app/gothic-store/node_modules/@emnapi/runtime
+npm verbose reify failed optional dependency /app/gothic-store/node_modules/@img/sharp-linuxmusl-x64
+npm verbose reify failed optional dependency /app/gothic-store/node_modules/@img/sharp-linuxmusl-arm64
+npm verbose reify failed optional dependency /app/gothic-store/node_modules/@img/sharp-linux-s390x
+npm verbose reify failed optional dependency /app/gothic-store/node_modules/@img/sharp-linux-ppc64
+npm verbose reify failed optional dependency /app/gothic-store/node_modules/@img/sharp-linux-arm64
+npm verbose reify failed optional dependency /app/gothic-store/node_modules/@img/sharp-linux-arm
+npm verbose reify failed optional dependency /app/gothic-store/node_modules/@img/sharp-libvips-linuxmusl-x64
+npm verbose reify failed optional dependency /app/gothic-store/node_modules/@img/sharp-libvips-linuxmusl-arm64
+npm verbose reify failed optional dependency /app/gothic-store/node_modules/@img/sharp-libvips-linux-s390x
+npm verbose reify failed optional dependency /app/gothic-store/node_modules/@img/sharp-libvips-linux-ppc64
+npm verbose reify failed optional dependency /app/gothic-store/node_modules/@img/sharp-libvips-linux-arm64
+npm verbose reify failed optional dependency /app/gothic-store/node_modules/@img/sharp-libvips-linux-arm
+npm verbose reify failed optional dependency /app/gothic-store/node_modules/@img/sharp-libvips-darwin-x64
+npm verbose reify failed optional dependency /app/gothic-store/node_modules/@img/sharp-libvips-darwin-arm64
+npm verbose reify failed optional dependency /app/gothic-store/node_modules/@img/sharp-darwin-x64
+npm verbose reify failed optional dependency /app/gothic-store/node_modules/@img/sharp-darwin-arm64
+npm verbose reify failed optional dependency /app/gothic-store/node_modules/@next/swc-win32-x64-msvc
+npm verbose reify failed optional dependency /app/gothic-store/node_modules/@next/swc-win32-arm64-msvc
+npm verbose reify failed optional dependency /app/gothic-store/node_modules/@next/swc-linux-x64-musl
+npm verbose reify failed optional dependency /app/gothic-store/node_modules/@next/swc-linux-arm64-musl
+npm verbose reify failed optional dependency /app/gothic-store/node_modules/@next/swc-linux-arm64-gnu
+npm verbose reify failed optional dependency /app/gothic-store/node_modules/@next/swc-darwin-x64
+npm verbose reify failed optional dependency /app/gothic-store/node_modules/@next/swc-darwin-arm64
+npm http cache client-only@https://registry.npmjs.org/client-only/-/client-only-0.0.1.tgz 0ms (cache hit)
+npm http cache color-name@https://registry.npmjs.org/color-name/-/color-name-1.1.4.tgz 0ms (cache hit)
+npm http cache color-string@https://registry.npmjs.org/color-string/-/color-string-1.9.1.tgz 0ms (cache hit)
+npm http cache color-convert@https://registry.npmjs.org/color-convert/-/color-convert-2.0.1.tgz 0ms (cache hit)
+npm http cache semver@https://registry.npmjs.org/semver/-/semver-7.7.2.tgz 0ms (cache hit)
+npm http cache @emnapi/runtime@https://registry.npmjs.org/@emnapi/runtime/-/runtime-1.5.0.tgz 0ms (cache hit)
+npm http cache detect-libc@https://registry.npmjs.org/detect-libc/-/detect-libc-2.0.4.tgz 0ms (cache hit)
+npm http cache color@https://registry.npmjs.org/color/-/color-4.2.3.tgz 0ms (cache hit)
+npm http cache is-arrayish@https://registry.npmjs.org/is-arrayish/-/is-arrayish-0.3.2.tgz 0ms (cache hit)
+npm http cache @img/sharp-linux-x64@https://registry.npmjs.org/@img/sharp-linux-x64/-/sharp-linux-x64-0.34.3.tgz 0ms (cache hit)
+npm http cache scheduler@https://registry.npmjs.org/scheduler/-/scheduler-0.26.0.tgz 0ms (cache hit)
+npm http cache @img/sharp-libvips-linux-x64@https://registry.npmjs.org/@img/sharp-libvips-linux-x64/-/sharp-libvips-linux-x64-1.2.0.tgz 0ms (cache hit)
+npm http cache picocolors@https://registry.npmjs.org/picocolors/-/picocolors-1.1.1.tgz 0ms (cache hit)
+npm http cache source-map-js@https://registry.npmjs.org/source-map-js/-/source-map-js-1.2.1.tgz 0ms (cache hit)
+npm http cache nanoid@https://registry.npmjs.org/nanoid/-/nanoid-3.3.11.tgz 0ms (cache hit)
+npm http cache sharp@https://registry.npmjs.org/sharp/-/sharp-0.34.3.tgz 0ms (cache hit)
+npm http cache styled-jsx@https://registry.npmjs.org/styled-jsx/-/styled-jsx-5.1.6.tgz 0ms (cache hit)
+npm http cache postcss@https://registry.npmjs.org/postcss/-/postcss-8.4.31.tgz 0ms (cache hit)
+npm http cache @next/swc-linux-x64-gnu@https://registry.npmjs.org/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-15.5.2.tgz 0ms (cache hit)
+npm http cache @swc/helpers@https://registry.npmjs.org/@swc/helpers/-/helpers-0.5.15.tgz 0ms (cache hit)
+npm http cache @next/env@https://registry.npmjs.org/@next/env/-/env-15.5.2.tgz 0ms (cache hit)
+npm http cache tslib@https://registry.npmjs.org/tslib/-/tslib-2.8.1.tgz 0ms (cache hit)
+npm http cache motion-utils@https://registry.npmjs.org/motion-utils/-/motion-utils-12.23.6.tgz 0ms (cache hit)
+npm http cache motion-dom@https://registry.npmjs.org/motion-dom/-/motion-dom-12.23.12.tgz 0ms (cache hit)
+npm http cache csstype@https://registry.npmjs.org/csstype/-/csstype-3.1.3.tgz 0ms (cache hit)
+npm http cache undici-types@https://registry.npmjs.org/undici-types/-/undici-types-6.21.0.tgz 0ms (cache hit)
+npm http cache typescript@https://registry.npmjs.org/typescript/-/typescript-5.9.2.tgz 0ms (cache hit)
+npm http cache react-dom@https://registry.npmjs.org/react-dom/-/react-dom-19.1.0.tgz 0ms (cache hit)
+npm http cache caniuse-lite@https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001739.tgz 0ms (cache hit)
+npm http cache next@https://registry.npmjs.org/next/-/next-15.5.2.tgz 0ms (cache hit)
+npm http cache react@https://registry.npmjs.org/react/-/react-19.1.0.tgz 0ms (cache hit)
+npm http cache @types/react-dom@https://registry.npmjs.org/@types/react-dom/-/react-dom-19.1.9.tgz 0ms (cache hit)
+npm http cache @types/react@https://registry.npmjs.org/@types/react/-/react-19.1.12.tgz 0ms (cache hit)
+npm http cache @types/node@https://registry.npmjs.org/@types/node/-/node-20.19.11.tgz 0ms (cache hit)
+npm http cache framer-motion@https://registry.npmjs.org/framer-motion/-/framer-motion-12.23.12.tgz 0ms (cache hit)
+npm http cache simple-swizzle@https://registry.npmjs.org/simple-swizzle/-/simple-swizzle-0.2.2.tgz 0ms (cache hit)
+npm http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 2145ms
+npm info run sharp@0.34.3 install node_modules/sharp node install/check.js
+npm info run sharp@0.34.3 install { code: 0, signal: null }
+
+added 63 packages, and audited 64 packages in 13s
+
+26 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+npm verbose cwd /app/gothic-store
+npm verbose os Linux 6.8.0
+npm verbose node v22.17.1
+npm verbose npm  v11.5.1
+npm verbose exit 0
+npm info ok
