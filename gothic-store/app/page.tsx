@@ -1,20 +1,33 @@
-'use client'; // This is a client component because it uses state
+'use client';
 
 import { useState } from 'react';
 import styles from './page.module.css';
 import { mockProducts, Product } from './mock-products';
 import ProductCard from './components/ProductCard';
-import ARView from './components/ARView'; // Import the new component
+import ARView from './components/ARView';
+import ProductDetailView from './components/ProductDetailView';
+import { AnimatePresence } from 'framer-motion'; // Import AnimatePresence
 
 export default function Home() {
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  // State for the AR view
+  const [arProduct, setArProduct] = useState<Product | null>(null);
+  // State for the Detail view
+  const [detailProduct, setDetailProduct] = useState<Product | null>(null);
 
   const handleTryOn = (product: Product) => {
-    setSelectedProduct(product);
+    setArProduct(product);
   };
 
   const handleCloseAR = () => {
-    setSelectedProduct(null);
+    setArProduct(null);
+  };
+
+  const handleOpenDetail = (product: Product) => {
+    setDetailProduct(product);
+  };
+
+  const handleCloseDetail = () => {
+    setDetailProduct(null);
   };
 
   return (
@@ -28,15 +41,23 @@ export default function Home() {
           <ProductCard
             key={product.id}
             product={product}
-            onTryOn={handleTryOn} // Pass the handler
+            onTryOn={handleTryOn}
+            onOpenDetail={handleOpenDetail} // Pass the new handler
           />
         ))}
       </div>
 
       {/* Conditionally render the AR View */}
-      {selectedProduct && (
-        <ARView product={selectedProduct} onClose={handleCloseAR} />
+      {arProduct && (
+        <ARView product={arProduct} onClose={handleCloseAR} />
       )}
+
+      {/* Conditionally render the Product Detail View with AnimatePresence */}
+      <AnimatePresence>
+        {detailProduct && (
+          <ProductDetailView product={detailProduct} onClose={handleCloseDetail} />
+        )}
+      </AnimatePresence>
     </main>
   );
 }

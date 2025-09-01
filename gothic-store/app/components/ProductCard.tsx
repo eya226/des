@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Product } from '../mock-products';
 import styles from './ProductCard.module.css';
+import { motion } from 'framer-motion'; // Import motion
 
 interface ProductCardProps {
   product: Product;
@@ -10,13 +11,19 @@ interface ProductCardProps {
 interface ProductCardProps {
   product: Product;
   onTryOn: (product: Product) => void;
+  onOpenDetail: (product: Product) => void; // Add handler for opening detail view
 }
 
-export default function ProductCard({ product, onTryOn }: ProductCardProps) {
+export default function ProductCard({ product, onTryOn, onOpenDetail }: ProductCardProps) {
   return (
-    <div className={styles.card}>
+    <motion.div
+      layoutId={`card-container-${product.id}`}
+      className={styles.card}
+      onClick={() => onOpenDetail(product)}
+    >
       <div className={styles.imageContainer}>
-        <Image
+        <motion.img
+          layoutId={`card-image-${product.id}`}
           src={product.image}
           alt={product.name}
           width={400}
@@ -25,9 +32,15 @@ export default function ProductCard({ product, onTryOn }: ProductCardProps) {
         />
       </div>
       <div className={styles.info}>
-        <h2 className={styles.name}>{product.name}</h2>
+        <motion.h2 layoutId={`card-title-${product.id}`} className={styles.name}>{product.name}</motion.h2>
         <p className={styles.price}>${product.price.toFixed(2)}</p>
-        <button className={styles.arButton} onClick={() => onTryOn(product)}>
+        <button
+          className={styles.arButton}
+          onClick={(e) => {
+            e.stopPropagation(); // Prevent the card's onClick from firing
+            onTryOn(product);
+          }}
+        >
           Gaze into the Scrying Mirror
         </button>
       </div>
