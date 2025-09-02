@@ -11,19 +11,32 @@ import { OrbitControls, useGLTF } from '@react-three/drei';
 // It assumes a .glb file exists for the product.
 function Model({ product }: { product: Product }) {
   // A real implementation would need a mapping from product to its 3D model URL
-  // For now, we'll assume a naming convention.
   const modelPath = `/mockups/${product.name.toLowerCase().replace(/ /g, '_')}.glb`;
+  const modelRef = useRef<THREE.Group>(null);
+
+  // --- Placeholder for Body Tracking ---
+  // A real implementation would use a library like MediaPipe or TensorFlow.js
+  // to get body landmarks from the video feed.
+  // const bodyLandmarks = useBodyTracking(videoRef); // Custom hook placeholder
+
+  // useFrame(() => {
+  //   // This hook runs on every rendered frame
+  //   if (modelRef.current && bodyLandmarks) {
+  //     // Example: Position the model over the user's torso
+  //     const torsoPosition = bodyLandmarks.getTorsoPosition(); // Placeholder function
+  //     modelRef.current.position.set(torsoPosition.x, torsoPosition.y, torsoPosition.z);
+  //     // You would also handle rotation and scaling here.
+  //   }
+  // });
+  // --- End Placeholder ---
 
   try {
     const { scene } = useGLTF(modelPath);
-    // You could add animations here if the model has them
-    return <primitive object={scene} scale={1.5} />;
+    return <primitive ref={modelRef} object={scene} scale={1.5} />;
   } catch (error) {
-    // This will happen since the models don't actually exist.
-    // We'll return a placeholder mesh.
     console.warn(`Could not load model from ${modelPath}. Displaying placeholder.`);
     return (
-      <mesh scale={0.5}>
+      <mesh ref={modelRef} scale={0.5}>
         <boxGeometry />
         <meshStandardMaterial color="purple" />
       </mesh>
