@@ -1,22 +1,23 @@
-# NOTE: Placeholder for social media trend analysis logic.
-# A real implementation would involve scraping or using APIs like the
-# TikTok for Business API or Instagram Graph API.
+# NOTE: This file is a placeholder for trend analysis logic.
 
-def get_trending_hashtags(platform: str) -> list:
+def get_trending_hashtags(platform: str):
     """
-    Simulates finding trending hashtags for a given platform.
+    Simulates fetching trending hashtags for a given platform.
+    In a real implementation, this would scrape or use an API.
     """
-    print(f"TRENDS: Searching for trending hashtags on {platform}...")
-    if platform == "instagram":
-        return ["#gothfashion", "#darkaesthetic", "#altstyle", "#gothicrevival"]
-    if platform == "tiktok":
-        return ["#goth", "#witchtok", "#altfashion", "#darkfantasy"]
-    return ["#gothic"]
+    print(f"Analyzing trends for {platform}...")
+    # For now, return a static list of gothic-themed hashtags.
+    common_hashtags = ["#gothicstyle", "#darkfashion", "#gothcore", "#altfashion"]
+    if platform == 'instagram':
+        return common_hashtags + ["#gothofinstagram", "#gothicasthetic"]
+    if platform == 'tiktok':
+        return common_hashtags + ["#gothgirl", "#fyp"]
+    return common_hashtags
 
-def get_trending_sound(platform: str) -> str:
+def get_trending_sound(platform: str):
     """
     Simulates finding a trending sound or song.
     """
-    print(f"TRENDS: Searching for trending sounds on {platform}...")
-    # In a real system, this would be a dynamic result.
-    return "A dark, atmospheric synth track"
+    print(f"Finding trending sound on {platform}...")
+    # Return a placeholder sound name
+    return "Whispers in the Dark - by The Void"

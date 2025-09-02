@@ -22,17 +22,17 @@ def run_marketing_for_new_product(product: dict):
 
     # 2. Generate content
     print("\n[Step 2: Generating Content]")
-    # For Instagram, we'll generate a video.
-    insta_video_path = content_generator.generate_video_post(product, insta_trends)
+    # For Instagram, we'll generate a video storyboard.
+    video_storyboard = content_generator.generate_video_post(product, insta_trends)
     insta_caption = content_generator.generate_poetic_caption(product, insta_trends)
 
-    # For TikTok, we can reuse the same video but might use different trends/captions
+    # For TikTok, we can reuse the same storyboard but might use different trends/captions
     tiktok_caption = content_generator.generate_poetic_caption(product, tiktok_trends)
 
     # 3. Publish content
     print("\n[Step 3: Publishing to Social Media]")
-    social_media_publisher.post_to_instagram(caption=insta_caption, video_path=insta_video_path)
+    social_media_publisher.post_to_instagram(caption=insta_caption, video_storyboard=video_storyboard)
     print("---")
-    social_media_publisher.post_to_tiktok(caption=tiktok_caption, video_path=insta_video_path)
+    social_media_publisher.post_to_tiktok(caption=tiktok_caption, video_storyboard=video_storyboard)
 
     print(f"\n--- MARKETING AGENT: Campaign for {product['name']} complete. ---\n")

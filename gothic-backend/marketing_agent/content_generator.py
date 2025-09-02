@@ -1,56 +1,73 @@
-# NOTE: Placeholder for content generation logic.
-# A real implementation would use image manipulation libraries (Pillow),
-# video editing libraries (moviepy), and TTS engines (e.g., gTTS, ElevenLabs).
-
+# NOTE: This file is a placeholder for content generation logic.
+import sys
 import os
-from . import trend_analyzer # Use relative import within the package
 
-def generate_image_post(product: dict) -> str:
-    """
-    Simulates creating a stylized image post.
-    In reality, this might add a border, text, or filter to the mockup.
-    """
-    print(f"CONTENT: Generating image post for {product['name']}...")
-    # For now, we just point to the existing mockup image.
-    mockup_path = product.get("thumbnail_url", "")
-    return f"/app/gothic-store/public{mockup_path}" # Return a simulated local path
+# Add the parent directory to the path to allow sibling imports
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+from ai_generator import generate_poetic_description
 
 def generate_poetic_caption(product: dict, trends: dict) -> str:
     """
-    Simulates generating a caption using product info and trends.
+    Generates a poetic caption for a social media post.
     """
-    print(f"CONTENT: Generating poetic caption for {product['name']}...")
-    base_poetry = f"Behold, the '{product['name']}'. A new relic forged in shadows and moonlight."
-    hashtags = " ".join(trends.get('hashtags', []))
-    caption = f"{base_poetry}\n\nSound: {trends.get('sound', 'none')}\n\n{hashtags}"
-    return caption
+    print(f"Generating poetic caption for {product['name']}...")
 
-def generate_video_post(product: dict, trends: dict) -> str:
+    # Use the main AI generator to create a base description
+    base_description = generate_poetic_description(product['name'])
+
+    # Add hashtags
+    hashtags_str = " ".join(trends.get('hashtags', []))
+
+    # Combine them into a final caption
+    final_caption = f"{base_description}\n\n" \
+                    f"Sound: {trends.get('sound', 'Silent as the grave')}\n" \
+                    f"Claim yours from the shadows.\n\n" \
+                    f"{hashtags_str}"
+
+    return final_caption
+
+def generate_video_storyboard(product: dict, trends: dict) -> dict:
     """
-    Simulates the entire video generation process.
+    Generates a storyboard for a short promotional video.
+    This simulates video generation by creating a structured plan.
     """
-    print(f"CONTENT: Starting video generation for {product['name']}...")
+    print(f"Generating video storyboard for {product['name']}...")
 
-    # 1. Get image
-    image_path = generate_image_post(product)
-    print(f"  -> Using image: {image_path}")
+    storyboard = {
+        "product_id": product['id'],
+        "product_name": product['name'],
+        "sound_track": trends.get('sound'),
+        "scenes": [
+            {
+                "scene": 1,
+                "type": "static_image",
+                "image_url": product['thumbnail_url'],
+                "duration_seconds": 2,
+                "text_overlay": "From the depths...",
+            },
+            {
+                "scene": 2,
+                "type": "zoom_in_image",
+                "image_url": product['thumbnail_url'],
+                "duration_seconds": 3,
+                "text_overlay": f"Behold... The {product['name']}",
+            },
+            {
+                "scene": 3,
+                "type": "static_image",
+                "image_url": product['thumbnail_url'],
+                "duration_seconds": 2,
+                "text_overlay": "Available now. Link in bio.",
+            }
+        ]
+    }
+    return storyboard
 
-    # 2. Generate Text-to-Speech audio
-    print("  -> Generating AI voice-over (dark, gothic tone)...")
-    # (Code for TTS would go here)
-    audio_path = "/tmp/mock_audio.mp3"
-
-    # 3. Add text overlays
-    print("  -> Designing text overlays ('Not just a hoodie... a rebellion')...")
-
-    # 4. Get trending music
-    sound_title = trends.get('sound')
-    print(f"  -> Layering with trending sound: {sound_title}")
-
-    # 5. Render video
-    print("  -> Rendering final video file...")
-    # (Code for moviepy or ffmpeg would go here)
-    video_path = f"/tmp/{product['name'].replace(' ', '_')}_reel.mp4"
-
-    print(f"CONTENT: Video generation complete. File at: {video_path}")
-    return video_path
+# This function is kept for compatibility with agent.py, but it now
+# returns a storyboard (dict) instead of a file path (str).
+def generate_video_post(product: dict, trends: dict) -> dict:
+    """
+    Simulates creating a video post by generating a storyboard.
+    """
+    return generate_video_storyboard(product, trends)
