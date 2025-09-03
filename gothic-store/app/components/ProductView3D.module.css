@@ -1,0 +1,160 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #111; /* Darker background for the viewer */
+}
+
+.closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid #555;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.viewerContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.canvas3D {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 10;
+  background: transparent !important;
+}
+
+.titleOverlay {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  background: rgba(26, 26, 26, 0.8);
+  padding: 0.5rem 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #444;
+  backdrop-filter: blur(5px);
+}
+
+.productName {
+  color: #e0e0e0;
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.2rem;
+}
+
+.controlsPanel {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  z-index: 20;
+  background: rgba(26, 26, 26, 0.8);
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid #444;
+  backdrop-filter: blur(5px);
+  color: #e0e0e0;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.controlSection {
+  margin-bottom: 1rem;
+}
+
+.controlSection:last-child {
+  margin-bottom: 0;
+}
+
+.controlTitle {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: normal;
+  border-bottom: 1px solid #444;
+  padding-bottom: 0.5rem;
+}
+
+.colorSwatches {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.swatch {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #555;
+  transition: transform 0.2s;
+}
+
+.swatch:hover {
+  transform: scale(1.1);
+}
+
+.annotationButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.annotationButton {
+  background: #333;
+  border: 1px solid #555;
+  color: #e0e0e0;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.2s;
+}
+
+.annotationButton:hover {
+  background: #444;
+}
+
+.annotationButton.active {
+  background: #8e44ad;
+  border-color: #c39bd3;
+}
+
+.annotation {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid #555;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1rem;
+  pointer-events: none; /* Allows clicks to go through to the model if needed */
+}

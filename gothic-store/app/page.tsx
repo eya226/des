@@ -4,22 +4,22 @@ import { useState } from 'react';
 import styles from './page.module.css';
 import { mockProducts, Product } from './mock-products';
 import ProductCard from './components/ProductCard';
-import ARView from './components/ARView';
+import ProductView3D from './components/ProductView3D';
 import ProductDetailView from './components/ProductDetailView';
 import { AnimatePresence } from 'framer-motion'; // Import AnimatePresence
 
 export default function Home() {
-  // State for the AR view
-  const [arProduct, setArProduct] = useState<Product | null>(null);
+  // State for the 3D view
+  const [productIn3D, setProductIn3D] = useState<Product | null>(null);
   // State for the Detail view
   const [detailProduct, setDetailProduct] = useState<Product | null>(null);
 
-  const handleTryOn = (product: Product) => {
-    setArProduct(product);
+  const handleOpen3D = (product: Product) => {
+    setProductIn3D(product);
   };
 
-  const handleCloseAR = () => {
-    setArProduct(null);
+  const handleClose3D = () => {
+    setProductIn3D(null);
   };
 
   const handleOpenDetail = (product: Product) => {
@@ -41,15 +41,15 @@ export default function Home() {
           <ProductCard
             key={product.id}
             product={product}
-            onTryOn={handleTryOn}
+            onOpen3D={handleOpen3D}
             onOpenDetail={handleOpenDetail} // Pass the new handler
           />
         ))}
       </div>
 
-      {/* Conditionally render the AR View */}
-      {arProduct && (
-        <ARView product={arProduct} onClose={handleCloseAR} />
+      {/* Conditionally render the 3D View */}
+      {productIn3D && (
+        <ProductView3D product={productIn3D} onClose={handleClose3D} />
       )}
 
       {/* Conditionally render the Product Detail View with AnimatePresence */}

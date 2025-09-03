@@ -10,11 +10,11 @@ interface ProductCardProps {
 // Add a function prop to handle the button click
 interface ProductCardProps {
   product: Product;
-  onTryOn: (product: Product) => void;
+  onOpen3D: (product: Product) => void;
   onOpenDetail: (product: Product) => void; // Add handler for opening detail view
 }
 
-export default function ProductCard({ product, onTryOn, onOpenDetail }: ProductCardProps) {
+export default function ProductCard({ product, onOpen3D, onOpenDetail }: ProductCardProps) {
   return (
     <motion.div
       layoutId={`card-container-${product.id}`}
@@ -38,10 +38,10 @@ export default function ProductCard({ product, onTryOn, onOpenDetail }: ProductC
           className={styles.arButton}
           onClick={(e) => {
             e.stopPropagation(); // Prevent the card's onClick from firing
-            onTryOn(product);
+            onOpen3D(product);
           }}
         >
-          Gaze into the Scrying Mirror
+          View in 3D
         </button>
       </div>
     </div>
