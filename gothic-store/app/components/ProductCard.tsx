@@ -44,6 +44,6 @@ export default function ProductCard({ product, onOpen3D, onOpenDetail }: Product
           View in 3D
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 }
