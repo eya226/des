@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 # Load environment variables from .env file
 load_dotenv()
 
-from ai_generator import ai_generator
+import ai_generator
 from stripe_service import create_checkout_session
 from printful_service import get_products
 # Import the marketing agent
